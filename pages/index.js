@@ -1,9 +1,9 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/LogIn.module.css";
 
 import Head from "next/head";
 import { useState } from "react";
 
-export default function Home() {
+export default function LogIn() {
   const [col, setCol] = useState("rgba(255, 255, 255, 0.5)");
 
   function down() {
@@ -44,7 +44,7 @@ export default function Home() {
 
         <p>
           Don't have an account?{" "}
-          <a className={styles.signUp} href="https://google.com">
+          <a className={styles.signUp} href="/SignUp">
             Sign Up
           </a>
         </p>
