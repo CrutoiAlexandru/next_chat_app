@@ -17,7 +17,7 @@ export default function SignUp() {
     setCol("rgba(255, 255, 255, 0.5)");
   }
 
-  function check(event) {
+  function checkMatchingPassword(event) {
     if (input1 !== input2) {
       event.preventDefault();
       setDisplayWarningType("block");
@@ -34,7 +34,7 @@ export default function SignUp() {
       </Head>
 
       <div className={styles.container}>
-        <form className={styles.form} onSubmit={check}>
+        <form className={styles.form} onSubmit={checkMatchingPassword}>
           <h3>Email</h3>
           <input
             type="text"
