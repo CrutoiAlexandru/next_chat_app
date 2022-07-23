@@ -2,8 +2,7 @@ const { MongoClient } = require("mongodb");
 
 // function for connecting to db
 function mongoConnect(mail, password) {
-  const uri =
-    "mongodb+srv://CrutoiAlexandru:VSCJP9730IQejRTR@cluster0.as0gsk4.mongodb.net/next-chat-app?retryWrites=true&writeConcern=majority";
+  const uri = `mongodb+srv://CrutoiAlexandru:${process.env.CLUSTER_PASSWORD}@${process.env.CLUSTER_URL}?retryWrites=true&writeConcern=majority`;
 
   const client = new MongoClient(uri);
 
